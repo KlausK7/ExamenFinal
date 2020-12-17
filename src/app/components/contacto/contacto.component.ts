@@ -27,7 +27,4 @@ export class ContactoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(form){
-
-  }
 }
