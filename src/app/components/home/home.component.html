@@ -1,4 +1,4 @@
-<h1 style="text-align:center;">{{tittle}}</h1>
+<h1 class="mt-3 text-center">{{tittle}}</h1>
 <div id="cajaCarrusel" class="container center">
     <mat-carousel
       timings="250ms ease-in"
@@ -12,14 +12,13 @@
       [loop]="true"
       [hideArrows]="false"
       [useKeyboard]="true"
-      [useMouseWheel]="false"
-      orientation="ltr"
-    > <!-- [hideIndicators]="false"  indicador de cual slide esta focus pero no funciona bien-->
+      [useMouseWheel]="true"
+      orientation="ltr">
       <mat-carousel-slide
         #matCarouselSlide
         *ngFor="let slide of slides; let i = index"
         [image]="slide.image"
-        overlayColor="#00000040"
+        overlayColor="#00000000"
         [hideOverlay]="false"
       ></mat-carousel-slide>
     </mat-carousel>

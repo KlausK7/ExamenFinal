@@ -1,59 +1,61 @@
-<div class="col-md-12 mt-3">
-    <p>{{tittle}}</p>
-    <form class="col-md-4 ml-0 pl-0" #contantoForm="ngForm" >
-        <div class="form-group">
-			<label for="name">Nombres </label>
-			<input type="text" class="form-control" name="nombresContacto" #nombresContacto="ngModel" [(ngModel)]="contact.nombres"  required pattern="[a-zA-Z]+">
-			<small *ngIf="nombresContacto.touched && nombresContacto.invalid" class="invalid-feedback d-block">Nombres no validos</small>
-        </div>
-        <div class="form-group">
-			<label for="name">Apellidos </label>
-			<input type="text" class="form-control" name="apellidosContacto" #apellidosContacto="ngModel" [(ngModel)]="contact.apellidos"  required pattern="[a-zA-Z]+">
-			<small *ngIf="apellidosContacto.touched && apellidosContacto.invalid" class="invalid-feedback d-block">Apellidos no validos</small>
-        </div>
-        <div class="form-group">
-			<label for="paisSeleccion">Pais</label>
-			<select name="paisContact" #paisContact="ngModel" [(ngModel)]="contact.pais" class="form-control" required>
-				<option *ngFor="let pais of paises" value="{{pais}}" >
-					{{pais}}
-            </select>
-            <small *ngIf="paisContact.touched && paisContact.invalid" class="invalid-feedback d-block">pais no validos</small>
-		</div>
-        <div class="form-group">
-			<label for="name">Numero de telefono </label>
-			<input type="text" class="form-control" name="numeroContacto" #numeroContacto="ngModel" [(ngModel)]="contact.numeroMovil"  required pattern="[0-9]{1,10}">
-			<small *ngIf="numeroContacto.touched && numeroContacto.invalid" class="invalid-feedback d-block">Numero de telefono no validos</small>
-        </div>
-        <div class="form-group">
-			<label for="name">Email </label>
-			<input type="email" class="form-control" name="emailContact" #emailContact="ngModel" [(ngModel)]="contact.email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-			<small *ngIf="emailContact.touched && emailContact.invalid" class="invalid-feedback d-block">Email no valido</small>
-        </div>
-        <div class="form-group">
-			<label for="name">Descripcion </label>
-			<input type="text" class="form-control" name="descripcionContacto" #descripcionContacto="ngModel" [(ngModel)]="contact.descripcion"  >
-        </div>
-        <input  type="submit" name="mensaje" class="btn btn-success" [disabled]="contantoForm.invalid"   data-toggle="modal" data-target="#exampleModal" />
-        
-        <!--modal para hacer algo y redireccionar-->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Estado del Mensaje</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+<div id="contacto" class="d-flex flex-column">
+    <div class="formulario">
+        <h1 class="text-center">{{tittle}}</h1>
+        <form class="ml-0 pl-0" #contantoForm="ngForm" >
+            <div class="form-group">
+                <label for="name">Nombres </label>
+                <input type="text" class="form-control" name="nombresContacto" #nombresContacto="ngModel" [(ngModel)]="contact.nombres"  required pattern="[a-zA-Z]+">
+                <small *ngIf="nombresContacto.touched && nombresContacto.invalid" class="invalid-feedback d-block">Nombres no validos</small>
+            </div>
+            <div class="form-group">
+                <label for="name">Apellidos </label>
+                <input type="text" class="form-control" name="apellidosContacto" #apellidosContacto="ngModel" [(ngModel)]="contact.apellidos"  required pattern="[a-zA-Z]+">
+                <small *ngIf="apellidosContacto.touched && apellidosContacto.invalid" class="invalid-feedback d-block">Apellidos no validos</small>
+            </div>
+            <div class="form-group">
+                <label for="paisSeleccion">Pais</label>
+                <select name="paisContact" #paisContact="ngModel" [(ngModel)]="contact.pais" class="form-control" required>
+                    <option *ngFor="let pais of paises" value="{{pais}}" >
+                        {{pais}}
+                </select>
+                <small *ngIf="paisContact.touched && paisContact.invalid" class="invalid-feedback d-block">pais no validos</small>
+            </div>
+            <div class="form-group">
+                <label for="name">Numero de telefono </label>
+                <input type="text" class="form-control" name="numeroContacto" #numeroContacto="ngModel" [(ngModel)]="contact.numeroMovil"  required pattern="[0-9]{1,10}">
+                <small *ngIf="numeroContacto.touched && numeroContacto.invalid" class="invalid-feedback d-block">Numero de telefono no validos</small>
+            </div>
+            <div class="form-group">
+                <label for="name">Email </label>
+                <input type="email" class="form-control" name="emailContact" #emailContact="ngModel" [(ngModel)]="contact.email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                <small *ngIf="emailContact.touched && emailContact.invalid" class="invalid-feedback d-block">Email no valido</small>
+            </div>
+            <div class="form-group">
+                <label for="name">Descripcion </label>
+                <input type="text" class="form-control" name="descripcionContacto" #descripcionContacto="ngModel" [(ngModel)]="contact.descripcion"  >
+            </div>
+            <input  type="submit" name="mensaje" class="btn btn-success" [disabled]="contantoForm.invalid"   data-toggle="modal" data-target="#exampleModal" />
+            
+            <!--modal para hacer algo y redireccionar-->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Estado del Mensaje</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                    Mensaje Enviado
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" [routerLink]="['/contacto']">Enviar Otro Mensaje</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" [routerLink]="['/home']">Inicio</button>
+                    </div>
                 </div>
-                <div class="modal-body">
-                Mensaje Enviado
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal" [routerLink]="['/contacto']">Enviar Otro Mensaje</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal" [routerLink]="['/home']">Inicio</button>
                 </div>
             </div>
-            </div>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>

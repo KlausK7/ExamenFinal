@@ -1,14 +1,28 @@
+@color: #fff;
+
 #piePag{
     text-align: center;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
 }
-.usuario{
-    width: auto;
-    height: auto;
-    text-align: center;
-}
-.iconos{
-    float: left;
+
+#menu-principal{
+    color: @color;
+    a{
+        color: @color !important;
+        font-size: 1.2rem;
+    }
+    .dropdown-menu{
+        a{
+            color: #000 !important;
+        }
+    }
+    @media (min-width: 960px){
+        li,.menu{
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
 }
