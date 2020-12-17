@@ -1,20 +1,20 @@
-<h1 style="text-align:center;">Angular 9 Material Carousel Slider</h1>
-<div id="cajaCarrusel">
+<h1 style="text-align:center;">{{tittle}}</h1>
+<div id="cajaCarrusel" class="container center">
     <mat-carousel
       timings="250ms ease-in"
       [autoplay]="true"
       interval="5000"
-      color="accent"
+      color="white"
+      slideHeight="100%"
       maxWidth="auto"
-      proportion="50"
+      proportion="40"
       slides="5"
       [loop]="true"
       [hideArrows]="false"
-      [hideIndicators]="false"
       [useKeyboard]="true"
       [useMouseWheel]="false"
       orientation="ltr"
-    >
+    > <!-- [hideIndicators]="false"  indicador de cual slide esta focus pero no funciona bien-->
       <mat-carousel-slide
         #matCarouselSlide
         *ngFor="let slide of slides; let i = index"
