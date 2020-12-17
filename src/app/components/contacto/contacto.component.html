@@ -1,15 +1,17 @@
 <div id="contacto" class="d-flex flex-column">
-    <div class="formulario">
+    <div class="formulario"> <!-- Formulario de enviar mensaje-->
         <h1 class="text-center">{{tittle}}</h1>
         <form class="ml-0 pl-0" #contantoForm="ngForm" >
             <div class="form-group">
                 <label for="name">Nombres </label>
                 <input type="text" class="form-control" name="nombresContacto" #nombresContacto="ngModel" [(ngModel)]="contact.nombres"  required pattern="[a-zA-Z]+">
+                <!-- Mensaje si ocurre un error en el ingreso-->
                 <small *ngIf="nombresContacto.touched && nombresContacto.invalid" class="invalid-feedback d-block">Nombres no validos</small>
             </div>
             <div class="form-group">
                 <label for="name">Apellidos </label>
                 <input type="text" class="form-control" name="apellidosContacto" #apellidosContacto="ngModel" [(ngModel)]="contact.apellidos"  required pattern="[a-zA-Z]+">
+                <!-- Mensaje si ocurre un error en el ingreso-->
                 <small *ngIf="apellidosContacto.touched && apellidosContacto.invalid" class="invalid-feedback d-block">Apellidos no validos</small>
             </div>
             <div class="form-group">
@@ -18,16 +20,19 @@
                     <option *ngFor="let pais of paises" value="{{pais}}" >
                         {{pais}}
                 </select>
+                <!-- Mensaje si ocurre un error en el ingreso-->
                 <small *ngIf="paisContact.touched && paisContact.invalid" class="invalid-feedback d-block">pais no validos</small>
             </div>
             <div class="form-group">
                 <label for="name">Numero de telefono </label>
                 <input type="text" class="form-control" name="numeroContacto" #numeroContacto="ngModel" [(ngModel)]="contact.numeroMovil"  required pattern="[0-9]{1,10}">
+                <!-- Mensaje si ocurre un error en el ingreso-->
                 <small *ngIf="numeroContacto.touched && numeroContacto.invalid" class="invalid-feedback d-block">Numero de telefono no validos</small>
             </div>
             <div class="form-group">
                 <label for="name">Email </label>
                 <input type="email" class="form-control" name="emailContact" #emailContact="ngModel" [(ngModel)]="contact.email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                <!-- Mensaje si ocurre un error en el ingreso-->
                 <small *ngIf="emailContact.touched && emailContact.invalid" class="invalid-feedback d-block">Email no valido</small>
             </div>
             <div class="form-group">

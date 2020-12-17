@@ -8,6 +8,7 @@ import {contacto} from '../../modelo/contacto';
 })
 export class ContactoComponent implements OnInit {
   public tittle = 'Datos para Contactar Admin';
+  // Array que contiene los paises del select
   public paises : Array<string> = ['Chile',
                   'Colombia',
                   'Ecuador',
@@ -16,6 +17,7 @@ export class ContactoComponent implements OnInit {
                   'Brasil'
   ];
   public pais : string;
+  // se creo un modelo de contacto para que se veo mejor estructurado
   public contact : contacto;
   
   constructor(
