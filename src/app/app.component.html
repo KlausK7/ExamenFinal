@@ -1,54 +1,57 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-primary">
-  <a class="navbar-brand" href="#">Home</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <a class="navbar-brand" [routerLink]="['/home']" >Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Electro
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Televisores</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Audio</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Marcas Destacadas</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dormitorio
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Ropa de Cama</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Camas</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Muebles de dormitorio</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Muebles de dormitorio</a>
-        </div>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" >Contacto </a>
-      </li>
-    </ul>
-    <ul class="navbar-nav  navbar-right">
-      <li class="nav-item active">
-        <a class="nav-link" >Login </a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" >Registro </a>
-      </li>
-    </ul>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Electro
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Televisores</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Audio</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Marcas Destacadas</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dormitorio
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Ropa de Cama</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Camas</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Muebles de dormitorio</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Muebles de dormitorio</a>
+          </div>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/contacto']">Contacto </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav  navbar-right">
+        <li class="nav-item active">
+          <a class="nav-link" >Login </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" >Registro </a>
+        </li>
+      </ul>
 
-  </div>
-</nav>
-<router-outlet></router-outlet>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+</div>
+
 <footer id="piePag">
   <small>@copyright 2020 diseñado por Claudio Molina</small>
 </footer>
