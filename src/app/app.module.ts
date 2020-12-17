@@ -8,6 +8,9 @@ import { HomeComponent } from './components/home/home.component';
 import { ErrorComponent } from './components/error/error.component';
 import { from } from 'rxjs';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCarouselModule } from '@ngmodule/material-carousel';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     routing,
-    FormsModule
+    FormsModule,
+    MatCarouselModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [
     appRoutingProviders
