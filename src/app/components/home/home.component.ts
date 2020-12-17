@@ -12,7 +12,9 @@ export class HomeComponent implements OnInit {
   //direcion imagenes
   slides = [{'image': './assets/electro.jpg'},
     {'image': './assets/cama.jpg'},
-    {'image': './assets/refri.webp'}
+    {'image': './assets/refri.webp'},
+    {'image': './assets/audio.jpg'},
+    {'image': './assets/closet.jpg'}
   ];
 
   constructor() { }
